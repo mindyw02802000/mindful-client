@@ -1,0 +1,348 @@
+/* 
+.aba{
+
+    display: flex;
+
+}
+.model{
+  margin: 2%;
+    border: black solid 2px;
+    width: 250px;
+    height: 250px;
+}
+.item{
+  width: 100px;
+  height: 100px;
+  margin-left: 25%; 
+      } */
+/* עיצוב כללי לדף */
+.models-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* כותרת הדף */
+.models-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.models-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.models-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+
+
+
+
+/* עיצוב כללי לדף */
+.models-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* כותרת הדף */
+.models-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.models-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.models-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* אזור הסינון */
+.models-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  margin-left: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.category-filter {
+  width: 200px;
+}
+
+.category-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.category-select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* רשת הדגמים */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.model-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.model-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.model-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.model-card:hover .model-image {
+  transform: scale(1.05);
+}
+
+.model-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.model-card:hover .model-overlay {
+  opacity: 1;
+}
+
+.details-button {
+  background-color: #ff2e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.details-button:hover {
+  background-color: #ff0a54;
+  transform: scale(1.05);
+}
+
+.model-info {
+  padding: 15px;
+}
+
+.model-id {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.model-category {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.model-price {
+  font-size: 1.1rem;
+  color: #ff2e63;
+  font-weight: 600;
+}
+
+/* הודעה כשאין דגמים */
+.no-models {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* תגובתיות */
+@media (max-width: 768px) {
+  .models-filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .search-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .category-filter {
+    width: 100%;
+  }
+  
+  .models-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .models-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.modell-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2); /* צבע רקע שקוף */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* גובה מקסימלי */
+  margin: 20px auto; /* מרכז את הקומפוננטה */
+}
+
+.modell-title {
+  font-size: 24px;
+  color: #ff0a54; /* צבע טקסט ראשי */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modell-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modell-description {
+  font-size: 16px;
+  color: white; /* צבע טקסט לבן */
+  text-align: center;
+  line-height: 1.5;
+}
+
+.hero-btn-primary {
+  background-color: #ff0a54; /* צבע כפתור ראשי */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-btn-primary:hover {
+  background-color: #ff0a54; /* צבע כפתור ראשי בהעברה */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 46, 99, 0.4);
+}
+
+.hero-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2); /* צבע כפתור משני */
+  color: white;
+  border: 2px solid white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+

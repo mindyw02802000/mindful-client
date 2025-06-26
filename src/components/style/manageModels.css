@@ -1,0 +1,686 @@
+/* עיצוב בצבעי האתר עם גוונים כהים ומעודנים */
+
+:root {
+  --primary-color: #ff2e63;
+  --primary-dark: #cc2650;
+  --primary-light: #ff5a85;
+  --background-light: #fff0f4;
+  --text-dark: #1a1a2e;
+  --text-muted: #555;
+  --border-color: #ff2e63;
+}
+
+.manage-models-container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+  font-family: 'Heebo', 'Rubik', sans-serif;
+  direction: rtl;
+  color: var(--text-dark);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.15);
+}
+
+.manage-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--primary-dark);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
+  color: white;
+  font-size: 1.15rem;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  user-select: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 8px 22px rgba(204, 38, 80, 0.6);
+}
+
+.btn-secondary {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  display: inline-block;
+  user-select: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.add-model-btn {
+  display: block;
+  margin: 0 auto 30px;
+  width: 220px;
+  font-size: 1.2rem;
+}
+
+.model-form {
+  background: var(--background-light);
+  padding: 30px 36px 36px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.15);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  position: relative;
+  animation: fadeIn 0.8s ease;
+  color: var(--text-dark);
+}
+
+.model-form h2 {
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-dark);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.model-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.model-form input[type="text"],
+.model-form input[type="number"],
+.model-form input[type="file"] {
+  width: 100%;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  border-radius: 30px;
+  border: 1.8px solid #e5a4b4;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  color: var(--text-dark);
+}
+
+.model-form input[type="text"]:focus,
+.model-form input[type="number"]:focus,
+.model-form input[type="file"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.model-image-preview {
+  display: block;
+  max-width: 180px;
+  max-height: 180px;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(255, 46, 99, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-buttons button {
+  flex: 1 1 140px;
+  min-width: 140px;
+  font-size: 1.15rem;
+  padding: 14px 0;
+  border-radius: 40px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(204, 38, 80, 0.6);
+}
+
+.models-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.model-card {
+  background: var(--background-light);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(243, 230, 233, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-dark);
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.model-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 46, 99, 0.2);
+}
+
+.model-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid #f7c1d1;
+}
+
+.model-info {
+  padding: 22px 24px;
+  flex-grow: 1;
+}
+
+.model-info h3 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-shadow: 0 1px 2px rgba(255, 46, 99, 0.5);
+}
+
+.model-info p {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+}
+
+.model-actions {
+  display: flex;
+  gap: 18px;
+  padding: 18px 24px;
+  background: #ffe6f0;
+  border-top: 1px solid var(--primary-color);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.model-actions button {
+  flex: 1 1 30%;
+  min-width: 100px;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  border-radius: 40px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(255, 46, 99, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.model-actions button:nth-child(2) {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.model-actions button:nth-child(2):hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.model-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(204, 38, 80, 0.6);
+}
+
+.detail-dialog {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 90vw !important;
+  max-width: 600px !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  z-index: 9999 !important;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  padding: 20px;
+}
+
+/* רקע כהה מתחת לדיאלוג */
+.dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+
+.detail-dialog-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.4rem;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.3s ease;
+  padding: 0 10px;
+  user-select: none;
+}
+
+.close-btn:hover {
+  color: var(--primary-dark);
+}
+
+.detail-dialog-content {
+  padding: 28px 36px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.detail-list {
+  margin-bottom: 28px;
+}
+
+.detail-item {
+  background: var(--background-light);
+  border-radius: 15px;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 18px rgba(255, 46, 99, 0.15);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.detail-item > div {
+  flex: 1 1 140px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 18px;
+  flex: 1 1 200px;
+  justify-content: flex-end;
+}
+
+.add-detail-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 44px;
+  border-radius: 40px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(255, 46, 99, 0.45);
+  transition: background-color 0.3s ease;
+  text-shadow: none;
+  user-select: none;
+}
+
+.add-detail-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* כפתור סגירה בטופס דגם */
+.model-form .close-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.model-form .close-btn:hover {
+  color: var(--primary-dark);
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .models-list {
+    grid-template-columns: 1fr;
+  }
+  .model-actions {
+    flex-direction: column;
+  }
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-buttons button {
+    width: 100%;
+  }
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .detail-actions {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.enhanced-dialog {
+  width: 600px;
+  max-width: 90vw;
+  border-radius: 18px;
+  padding: 28px 38px;
+  background: #fff0f4; /* ורוד לבנבן רך */
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.15); /* צל ורוד רך */
+  font-family: 'Heebo', 'Rubik', sans-serif;
+  color: #4a4a4a; /* אפור כהה רך */
+  position: relative;
+}
+
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: #4a4a4a6e; /* ורוד שקוף מאוד */
+  z-index: 999;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2.5px solid rgba(255, 46, 99, 0.4); /* ורוד רך */
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  color: #ff2e63; /* צבע המותג */
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(255, 46, 99, 0.3);
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ff2e63;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(255, 46, 99, 0.4);
+}
+
+.close-button:hover {
+  color: #ff0a54;
+  text-shadow: 0 0 8px rgba(255, 10, 84, 0.6);
+}
+
+.dialog-content {
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detail-item {
+  background: #fff5f8; /* ורוד לבנבן מאוד רך */
+  padding: 18px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(255, 46, 99, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5a5a5a; /* אפור בינוני */
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.detail-actions button {
+  margin-left: 12px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 15px rgba(255, 46, 99, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.detail-actions .btn-primary {
+  background-color: rgba(255, 46, 99, 0.3); /* ורוד רך שקוף */
+  color: #ff2e63;
+}
+
+.detail-actions .btn-primary:hover {
+  background-color: #ff2e63;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 46, 99, 0.4);
+  transform: translateY(-2px);
+}
+
+.detail-actions .btn-secondary {
+  background-color: #ffe6f0; /* ורוד מאוד בהיר */
+  color: #ff2e63;
+  border: 2px solid rgba(255, 46, 99, 0.4);
+}
+
+.detail-actions .btn-secondary:hover {
+  background-color: #ff2e63;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 46, 99, 0.4);
+  transform: translateY(-2px);
+}
+
+.detail-form {
+  margin-top: 30px;
+  background: #fff0f4; /* ורוד לבנבן רך */
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.15);
+  color: #5a5a5a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.detail-form h3 {
+  margin-top: 0;
+  color: #ff2e63;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(255, 46, 99, 0.3);
+}
+
+.detail-form label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #ff2e63;
+  font-size: 1rem;
+}
+
+.detail-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 8px;
+  border: 2px solid rgba(255, 46, 99, 0.3);
+  border-radius: 30px;
+  font-size: 1rem;
+  background: #fff;
+  color: #5a5a5a;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+  box-shadow: inset 0 2px 6px rgba(255, 46, 99, 0.1);
+}
+
+.detail-form input::placeholder {
+  color: #f7c9d9;
+}
+
+.detail-form input:focus {
+  outline: none;
+  border-color: #ff2e63;
+  box-shadow: 0 0 12px rgba(255, 46, 99, 0.4);
+}
+
+.form-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #ff2e63;
+  color: white;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 46, 99, 0.35);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #ff0a54;
+  box-shadow: 0 10px 30px rgba(255, 10, 84, 0.6);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: #fff5f8;
+  color: #ff2e63;
+  border: 2px solid rgba(255, 46, 99, 0.4);
+  padding: 14px 38px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 46, 99, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: #ff2e63;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.4);
+  transform: translateY(-3px);
+}
+
+.add-detail-btn {
+  margin-top: 25px;
+  background-color: rgba(255, 46, 99, 0.3);
+  color: #ff2e63;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 46, 99, 0.25);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.add-detail-btn:hover {
+  background-color: #ff2e63;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 46, 99, 0.4);
+  transform: translateY(-3px);
+}

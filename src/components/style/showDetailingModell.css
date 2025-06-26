@@ -1,0 +1,306 @@
+/* עיצוב כללי לדיאלוג */
+.detail-dialog {
+    width: 90%;
+    max-width: 900px;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    position: fixed;
+    top: 15%;
+    right: 28%;
+  }
+  
+  .detail-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+  }
+  
+  /* כותרת הדיאלוג */
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .dialog-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-button:hover {
+    color: #ff2e63;
+  }
+  
+  /* תוכן הדיאלוג */
+  .dialog-content {
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* פרטי הדגם */
+  .model-details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .model-image-container {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  .model-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .model-info-container {
+    flex: 1;
+  }
+  
+  .model-detail-id {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .model-detail-category {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .model-detail-price {
+    font-size: 1.2rem;
+    color: #ff2e63;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* מידות זמינות */
+  .sizes-container {
+    margin-top: 20px;
+  }
+  
+  .sizes-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+  
+  .sizes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .size-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .size-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .size-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .size-available {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* בקרת כמות */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .quantity-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+  }
+  
+  .quantity-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    -moz-appearance: textfield;
+  }
+  
+  .quantity-input::-webkit-outer-spin-button,
+  .quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* סיכום הזמנה */
+  .order-summary {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .summary-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+  
+  .summary-details {
+    margin-bottom: 20px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .summary-row:last-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ff2e63;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+  }
+  
+  /* הערות להזמנה */
+  .order-note {
+    margin-bottom: 20px;
+  }
+  
+  .order-note label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .order-note textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.9rem;
+  }
+  
+  .order-note textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /* כפתור הוספה לסל */
+  .add-to-cart-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff2e63;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .add-to-cart-button:hover:not(:disabled) {
+    background-color: #ff0a54;
+    transform: translateY(-2px);
+  }
+  
+  .add-to-cart-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* כשההזמנה מצליחה */
+  .add-to-cart-button:disabled:not([disabled=""]) {
+    background-color: #4CAF50;
+  }
+  
+  /* תגובתיות */
+  @media (max-width: 768px) {
+    .model-details {
+      flex-direction: column;
+    }
+    
+    .model-image-container {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .sizes-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sizes-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

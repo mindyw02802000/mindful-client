@@ -1,0 +1,554 @@
+/* .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  min-height: 85px;
+  background-color: #8dbc66; /* ירוק עדין 
+  padding: 10px 20px;
+  box-sizing: border-box;
+  direction: rtl;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.navigate {
+  flex: 1 1 30%; /* תופס כ-30% רוחב, גמיש 
+  max-width: 33%;
+  min-width: 180px;
+  height: 90px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 15px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.navigate:hover {
+  background-color: #78a454; /* גוון כהה יותר 
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* התאמה למסכים בינוניים 
+@media (max-width: 992px) {
+  .navigate {
+    font-size: 1.5rem;
+    height: 80px;
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+}
+
+/* התאמה למסכים קטנים 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    min-height: auto;
+    gap: 12px;
+    padding: 15px 10px;
+  }
+  .navigate {
+    max-width: 100%;
+    flex-basis: 100%;
+    height: 70px;
+    font-size: 1.4rem;
+  }
+}
+/* התאמה למסכים קטנים מאוד 
+@media (max-width: 480px) {
+  .navigate {
+    font-size: 1.2rem;
+    height: 60px;
+    padding: 0 10px;
+  }
+}
+
+/* התאמה למסכים קטנים מאוד מאוד 
+@media (max-width: 360px) {
+  .navigate {
+    font-size: 1rem;
+    height: 55px;
+  }
+} */
+
+/* .header{
+
+    display: flex;
+    }
+    .navigate{
+        height: 100px;
+        width: 33%;
+        margin-bottom: 15px;
+        font-size: 50px;
+        background-color: #8dbc66;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border: none;
+       text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        }
+        .navigate:not(:disabled):hover {
+            background-color: #78a454;
+        }
+     .logo{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+        }
+        */
+        /* .CustomerPage {
+            padding: 3rem;
+            background: linear-gradient(135deg, #f6f8fc 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .myCustomers {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 3rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #ffffff 0%, #c6fff1 100%);
+            color: rgb(0, 0, 0);
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 1.1rem;
+            color: #2d3436;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+            transform: scale(1.01);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        tr {
+            transition: all 0.3s ease;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .CustomerPage {
+                padding: 1.5rem;
+            }
+            
+            .myCustomers {
+                font-size: 2.5rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            th, td {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+         */
+         /* .orders-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            direction: rtl;
+            font-family: 'Rubik', sans-serif;
+          }
+          
+          .orders-header {
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #f0f0f0;
+          }
+          
+          .orders-header h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+          }
+          
+          .orders-header p {
+            color: #666;
+            font-size: 16px;
+          }
+          
+          .table-container {
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: white;
+          }
+          
+          .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+          }
+          
+          .orders-table th {
+            background-color: #4a90e2;
+            color: white;
+            font-weight: 600;
+            padding: 12px 15px;
+            text-align: right;
+            position: sticky;
+            top: 0;
+          }
+          
+          .orders-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333;
+          }
+          
+          .order-row:hover {
+            background-color: #f9f9f9;
+          }
+          
+          .order-row:nth-child(even) {
+            background-color: #f5f8ff;
+          }
+          
+          .price-cell {
+            font-weight: bold;
+            color: #2e7d32;
+          }
+          
+          .details-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
+          }
+          
+          .details-button:hover {
+            background-color: #3a7bc8;
+          }
+          
+          @media (max-width: 768px) {
+            .orders-table {
+              font-size: 12px;
+            }
+            
+            .orders-table th,
+            .orders-table td {
+              padding: 8px 10px;
+            }
+            
+            .details-button {
+              padding: 6px 10px;
+              font-size: 12px;
+            }
+        } */
+        /* עיצוב כללי */
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* עיצוב כותרות הטבלה 
+  thead {
+    background-color: #4a90e2;
+  }
+  
+  th {
+    padding: 15px 12px;
+    text-align: right;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 2px solid #3a7bc8;
+  }
+  
+  /* עיצוב תאי הטבלה 
+  tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f8ff;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6f0ff;
+  }
+  
+  tbody th {
+    padding: 12px;
+    text-align: right;
+    color: #333;
+    font-weight: normal;
+    border-bottom: none;
+  }
+  
+  /* עיצוב כפתור הפרטים 
+  button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  button:hover {
+    background-color: #3a7bc8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* עיצוב כפתור הצגת הזמנות 
+  .buttonGet {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    display: block;
+  }
+  
+  /* עיצוב רספונסיבי 
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+    
+    th, tbody th {
+      padding: 10px 8px;
+    }
+    
+    button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* עיצוב מיוחד לתא המחיר 
+  tbody th:nth-child(8) {
+    font-weight: bold;
+    color: #2e7d32;
+  }
+
+  /* עיצוב כותרת עליונה 
+  div > h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  
+   */
+  
+  /* עיצוב כללי */
+  .orders-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    color: #333;
+  }
+  
+  /* כותרת */
+  .orders-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .orders-title h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+  }
+  
+  /* חיפוש */
+  .search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .search-box {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .search-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  .search-box input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .reset-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* טבלה */
+  .table-wrapper {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .orders-table th {
+    background-color: #4a505b;
+    color: white;
+    padding: 12px 15px;
+    text-align: right;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  
+  .orders-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .order-row:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .order-row:nth-child(even) {
+    background-color: #f5f7fa;
+  }
+  
+  .details-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .details-btn:hover {
+    bbackground-color: #2980b9;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+    }
+    
+    .orders-table {
+      font-size: 13px;
+    }
+    
+    .orders-table th,
+    .orders-table td {
+      padding: 8px 10px;
+    }
+  }

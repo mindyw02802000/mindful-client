@@ -1,0 +1,455 @@
+/* עיצוב כללי לדף */
+.cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .cart-container {
+    margin-top: 30px;
+  }
+  
+  .cart-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* עיצוב לסל ריק */
+  .empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .empty-cart-icon {
+    font-size: 5rem;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .empty-cart-message {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* עיצוב לתוכן הסל */
+  .cart-content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .cart-items {
+    flex: 1;
+  }
+  
+  .cart-sidebar {
+    width: 350px;
+  }
+  
+  /* עיצוב לכרטיס הזמנה */
+  .order-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  .order-header {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .order-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .order-items {
+    padding: 20px;
+  }
+  
+  /* עיצוב לפריט בסל */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+  }
+  
+  .item-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 0 5px 0;
+  }
+  
+  .item-size, .item-price {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 5px 0;
+  }
+  
+  /* בקרת כמות */
+  .item-quantity {
+    margin: 0 20px;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+    padding: 5px;
+  }
+  
+  .quantity-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: #333;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+  }
+  
+  .quantity-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .quantity-value {
+    width: 30px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .item-total {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    width: 80px;
+    text-align: left;
+  }
+  
+  .remove-item-btn {
+    background: none;
+    border: none;
+    color: #ff2e63;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 10px;
+  }
+  
+  .remove-item-btn:hover {
+    color: #ff0a54;
+  }
+  
+  /* הערות להזמנה */
+  .order-note {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .note-title {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 10px 0;
+  }
+  
+  .note-content {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* סיכום הזמנה בכרטיס */
+  .order-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .order-total-items, .order-total-price {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .order-total-price {
+    font-weight: 600;
+    color: #ff2e63;
+  }
+  
+  /* סיכום הזמנה בסרגל צד */
+  .cart-summary {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .summary-row.total {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ff2e63;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #eaeaea;
+  }
+  
+  .summary-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .place-order-btn, .clear-cart-btn, .continue-shopping-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .place-order-btn {
+    background-color: #ff2e63;
+    color: white;
+  }
+  
+  .place-order-btn:hover:not(:disabled) {
+    background-color: #ff0a54;
+    transform: translateY(-2px);
+  }
+  
+  .place-order-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .place-order-btn:disabled:not([disabled=""]) {
+    background-color: #4CAF50;
+  }
+  
+  .clear-cart-btn {
+    background-color: #f8f9fa;
+    color: #666;
+    border: 1px solid #ddd;
+  }
+  
+  .clear-cart-btn:hover:not(:disabled) {
+    background-color: #f0f0f0;
+  }
+  
+  .continue-shopping-btn {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .continue-shopping-btn:hover:not(:disabled) {
+    background-color: #3a80d2;
+    transform: translateY(-2px);
+  }
+  
+  /* פרטי הזמנה */
+  .order-info {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  .info-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .info-row {
+    margin-bottom: 15px;
+  }
+  
+  .info-label {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .info-value {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* תגובתיות */
+  @media (max-width: 992px) {
+    .cart-content {
+      flex-direction: column;
+    }
+    
+    .cart-sidebar {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cart-item {
+      flex-wrap: wrap;
+    }
+    
+    .item-image {
+      margin-left: 15px;
+    }
+    
+    .item-details {
+      flex: 0 0 calc(100% - 115px);
+    }
+    
+    .item-quantity {
+      margin: 15px 0 0 0;
+      order: 3;
+    }
+    
+    .item-total {
+      margin-top: 15px;
+      order: 4;
+      text-align: right;
+    }
+    
+    .remove-item-btn {
+      margin-top: 15px;
+      order: 5;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-title {
+      font-size: 1.5rem;
+    }
+    
+    .order-summary {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  /* הוספה לקובץ CSS הקיים */
+
+/* עיצוב לשדות קלט בפרטי הזמנה */
+.info-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .info-input:focus {
+    outline: none;
+    border-color: #4a90e2;
+  }
+  
+  .info-input::placeholder {
+    color: #aaa;
+  }
+  
+  /* עיצוב למצב טעינה וסטטוס */
+  .place-order-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .place-order-btn:disabled[disabled=""] {
+    background-color: #ccc;
+  }
+  
+  .place-order-btn:disabled:not([disabled=""]) {
+    background-color: #4CAF50;
+  }
+  
+  /* הודעת שגיאה */
+  .error-message {
+    color: #ff3860;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
