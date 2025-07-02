@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const updateModelThunk = createAsyncThunk('updateModelThunk',
     async (order) => {
-        const response = await fetch(`http://localhost:5000/api/ModellsControllers/Edit`,
+        const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/ModellsControllers/Edit`,
             {
                 method: 'PUT',
                 body: JSON.stringify(order),

@@ -5,7 +5,7 @@ export const getModelThunk = createAsyncThunk('getModelThunk',
 
     async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/ModellsControllers/GetModels`);
+            const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/ModellsControllers/GetModels`);
            
             const data = await response.json();
             console.log("data: ", data);

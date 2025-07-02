@@ -28,7 +28,7 @@ export const deleteOrderThunk = createAsyncThunk(
     'deleteOrderThunk',
     async (id, { rejectWithValue }) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/Orders/delete/${id}`, {
+            const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/Orders/delete/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {

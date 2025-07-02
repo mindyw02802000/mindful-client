@@ -4,7 +4,7 @@ export const deleteDetailingModelThunk = createAsyncThunk(
     'deleteDetailingModelThunk',
     async (id, { rejectWithValue }) => {
       try {
-        const response = await fetch(`http://localhost:5000/api/DetailingModelControler/delete/${id}`
+        const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/DetailingModelControler/delete/${id}`
         , {
           method: 'DELETE', // חשוב מאוד לציין את השיטה
         });

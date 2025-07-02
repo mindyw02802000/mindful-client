@@ -5,7 +5,7 @@ export const getOrdersThunk = createAsyncThunk('getOrdersThunk',
 
     async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/Orders/GetOrders`);
+            const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/Orders/GetOrders`);
             console.log("response: ", response);
             const data = await response.json();
             console.log("data: ", data);

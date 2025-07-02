@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 export const loginThunk = createAsyncThunk('loginThunk',
 
     async (school) => {
-        const response = await fetch(`http://localhost:5000/api/SchoolsControler/Add`,
+        const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/SchoolsControler/Add`,
             {
                 method: 'POST',
                 body: JSON.stringify(school

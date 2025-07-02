@@ -22,7 +22,7 @@ export const saveOrderToServer = createAsyncThunk("order/saveOrderToServer",
 
     async (orderData) => {
         debugger
-        const response = await fetch(`http://localhost:5000/api/Orders/Add`,
+        const response = await fetch(`https://mindful-server-l2lj.onrender.com/api/Orders/Add`,
             {
                 method: 'POST',
                 body: JSON.stringify(orderData
