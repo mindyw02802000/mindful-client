@@ -291,9 +291,9 @@ if(addingDetail){
             accept="image/*"
             onChange={handleModelChange}
           />
-          {formData.picture && (
+          {/* {formData.picture && (
             <imgsrc={formData.picture} alt="תמונה לדגם" className="model-image-preview" />
-          )}
+          )} */}
           <div className="form-buttons">
             <button className="btn-primary" onClick={saveModel} disabled={uploadingImage}>
               {uploadingImage ? 'מעלה תמונה...' : 'שמור'}

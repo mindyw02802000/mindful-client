@@ -158,7 +158,7 @@ export const ShowDetailingModel = (prop) => {
       <div className="dialog-content">
         <div className="model-details">
           <div className="model-image-container">
-            <imgclassName="model-detail-image" src={`https://localhost:5000/img/${picture}`}  />
+            {/* <imgclassName="model-detail-image" src={`https://localhost:5000/img/${picture}`}  /> */}
           </div>
           
           <div className="model-info-container">
