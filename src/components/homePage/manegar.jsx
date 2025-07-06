@@ -46,7 +46,7 @@ export const Maneger = () => {
              <div className='navigate' onClick={() => ManageModels()}>ניהול דגמים</div>
            <div className='navigate' onClick={() =>home()}>דף הבית</div>
       </div>
-      {/* //<img className='logo' src="logo.jpg"  /> */}
+      {/* <img className='logo' src="logo.jpg"  /> */}
       {/* {dialog === true && <LogIn />} */}
    </div>
 

@@ -34,7 +34,7 @@ return<>
 <Route path={'/payment'} element={<Payment/>}/>
 <Route path={'/calender'} element={<Calendar/>}/>
 <Route path={'/craditCard'} element={<Card/>}/>
-<Route path={'//katalog'} element={<Katalog/>}/>
+<Route path={'/katalog'} element={<Katalog/>}/>
 <Route path={'/sal'} element={<Cart/>}/>
 <Route path={'/order-confirmation'} element={<OrderConfirmation />}/> 
 <Route path={'/ManageModels'} element={<ManageModels />}/> 

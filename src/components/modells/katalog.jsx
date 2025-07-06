@@ -49,7 +49,7 @@ export const Katalog = () => {
          <div className="katalog-container">
             <div className="katalog-card">
                <div className="katalog-image">
-               {/* //<imgsrc={katalogImage1} alt="קטלוג 2020" /> */}
+               {/* <imgsrc={katalogImage1} alt="קטלוג 2020" /> */}
     
                   <div className="katalog-year">2020</div>
                </div>
@@ -67,7 +67,7 @@ export const Katalog = () => {
             
             <div className="katalog-card">
                <div className="katalog-image">
-                  {/* //<imgsrc={katalogImage2} alt="קטלוג 2022" /> */}
+                  {/* <imgsrc={katalogImage2} alt="קטלוג 2022" /> */}
                   <div className="katalog-year">2022</div>
                </div>
                <div className="katalog-content">
