@@ -52,7 +52,7 @@ export const Nivut = () => {
 
 
       </div>
-      {/* <img  className='logo' src="logo.jpg"  /> */}
+      {/* //<img className='logo' src="logo.jpg"  /> */}
       {/* {dialog === true && <LogIn />} */}
    </div>
 

@@ -100,7 +100,7 @@ export const Home = () => {
         </div>
       </section>
       
-      <img className='logo' src="logo100.png" alt="לוגו האתר" />
+      //<imgclassName='logo' src="logo100.png" alt="לוגו האתר" />
       
       {/* כפתור התנתקות בתחתית הדף */}
       <div className="footer-logout">

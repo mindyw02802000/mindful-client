@@ -44,7 +44,7 @@
 //                     })}
 //                     {/* onClick={()=>setNewItem()} */}
 //                <button  >הוסף לסל</button>     
-//               <img  className='item' src={`${picture}`}/>       
+//               //<img className='item' src={`${picture}`}/>       
 //     </dialog>
 // }
 
@@ -158,7 +158,7 @@ export const ShowDetailingModel = (prop) => {
       <div className="dialog-content">
         <div className="model-details">
           <div className="model-image-container">
-            <img className="model-detail-image" src={`https://localhost:5000/img/${picture}`}  />
+            //<imgclassName="model-detail-image" src={`https://localhost:5000/img/${picture}`}  />
           </div>
           
           <div className="model-info-container">
