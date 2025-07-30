@@ -1,4 +1,4 @@
-# Mindy-Tzipy Client
+# Mindful Client
 
 מערכת לניהול עסק השכרת תלבושות – צד לקוח.
 
@@ -16,10 +16,11 @@
 
 ## הוראות התקנה והרצה
 1. יש להוריד את הקוד:
-git clone https://github.com/mindi32792/Mindy-Tzipy.git
+git clone https://github.com/mindyw02802000/mindful-client.git
 
 2. להיכנס לתיקיה:
-cd Mindy-Tzipy
+cd mindful-client
+
 3. להתקין חבילות:
 npm install
 4. להריץ את הפרויקט:
