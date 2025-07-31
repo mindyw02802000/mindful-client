@@ -33,7 +33,7 @@ export const HomeManeger = () => {
         
         // אם אין משתמש מחובר, ננווט לדף ההתחברות
         if (!school || !school.name) {
-          navigate('/login');
+          // navigate('/login');
         }
       }, [school, navigate]);
 
@@ -50,7 +50,7 @@ export const HomeManeger = () => {
 
        // אם אין משתמש מחובר, לא נציג את התוכן
   if (!school || !school.name) {
-    return null;
+    // return null;
   }
       return (
     <div className="home-container">
